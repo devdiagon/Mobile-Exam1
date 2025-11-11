@@ -18,6 +18,9 @@ class Result extends StatelessWidget {
     final String descLimones = args['descLimones']!;
     final String descChirimollos = args['descChirimollos']!;
 
+    final String noIva = args['noIva']!;
+    final String extraIva = args['extraIva']!;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cuenta'),
@@ -61,6 +64,18 @@ class Result extends StatelessWidget {
               FacturaDetailRow(
                 label: "Chirimollos",
                 value: "\$${totalChirimollos + "   " + descChirimollos}",
+              ),
+              Divider(height: 24),
+
+              FacturaDetailRow(
+                label: "Subtotal",
+                value: "\$${noIva}",
+              ),
+              SizedBox(height: 12,),
+
+              FacturaDetailRow(
+                label: "IVA",
+                value: "\$${extraIva}",
               ),
 
               Divider(height: 24),

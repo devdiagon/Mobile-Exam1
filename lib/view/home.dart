@@ -66,6 +66,8 @@ class _HomeState extends State<Home> {
             'descLimones': treeCtrl.selectedTrees[1].discountLabel,
             'totalChirimollos': totalChirimollos,
             'descChirimollos': treeCtrl.selectedTrees[2].discountLabel,
+            'noIva': treeCtrl.noIva.toStringAsFixed(2),
+            'extraIva':treeCtrl.extraIva.toStringAsFixed(2),
           }
       );
 

@@ -30,11 +30,18 @@ class TreeController{
     return 0.0;
   }
 
-  double get total {
+  double get noIva {
     final subtotalValue = subtotal;
     final discountValue = subtotalValue * globalDiscount;
-    final noIva = subtotalValue - discountValue;
-    final extraIva = noIva * 0.15;
+    return subtotalValue - discountValue;
+  }
+
+  double get extraIva {
+    final charge = noIva;
+    return charge * 0.15;
+  }
+
+  double get total {
     return noIva + extraIva;
   }
 
